@@ -1,0 +1,23 @@
+{
+    "name": "dragonofmercy/openrouter-solution",
+    "version": "1.0.0",
+    "description": "AI Solution provider using OpenRouter service for Spatie Ignition Error Solution",
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0|^11.0",
+        "openai-php/client": "^0.10.3",
+        "spatie/laravel-ignition": "^2.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dragon\\OpenRouter\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dragon\\OpenRouter\\OpenRouterServiceProvider"
+            ]
+        }
+    }
+}
