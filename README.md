@@ -18,10 +18,24 @@ In your composer.json
 }
 ````
 
-Publish configuration file
+### Publish configuration file
 
 ````bash
 php artisan vendor:publish --tag="openrouter-solution-config"
+````
+
+### Register solution provider in Ignition
+
+Open `ignition.php` in your `Config` directory.   
+Just add `\Dragon\OpenRouter\OpenRouterSolutionProvider::class` in the `solution_providers` array.
+
+````php
+'solution_providers' => [
+    ...
+    UnknownMysql8CollationSolutionProvider::class,
+    UnknownMariadbCollationSolutionProvider::class,
+    \Dragon\OpenRouter\OpenRouterSolutionProvider::class
+],
 ````
 
 ---
