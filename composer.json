@@ -1,7 +1,14 @@
 {
     "name": "dragonofmercy/openrouter-solution",
-    "version": "1.0.0",
     "description": "AI Solution provider using OpenRouter service for Spatie Ignition Error Solution",
+    "keywords" : ["error", "page", "laravel", "openrouter", "openai"],
+    "authors" : [{
+        "name" : "DragonOfMercy",
+        "email" : "dragonofmercy@gmail.com",
+        "role" : "Developer"
+    }],
+    "homepage" : "https://github.com/dragonofmercy/openrouter-solution",
+    "license" : "MIT",
     "require": {
         "php": "^8.1",
         "illuminate/support": "^10.0|^11.0",
@@ -13,6 +20,8 @@
             "Dragon\\OpenRouter\\": "src/"
         }
     },
+    "minimum-stability" : "dev",
+    "prefer-stable" : true,
     "extra": {
         "laravel": {
             "providers": [
