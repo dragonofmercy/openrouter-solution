@@ -2,10 +2,10 @@
 
 AI Solution provider using OpenRouter service for Spatie Ignition Error Solution
 
-## Usage
+### Installation
 
 ````bash
-composer require dragonofmercy/openrouter-solution
+composer require dragonofmercy/openrouter-solution --dev
 ````
 
 ### Publish configuration file
