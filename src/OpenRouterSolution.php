@@ -25,19 +25,19 @@ class OpenRouterSolution extends OpenAiSolution
                 'temperature' => 0,
             ])->choices[0]->message->content;
 
+
         $this->cache->set($this->getCacheKey(), $solutionText, $this->cacheTtlInSeconds);
 
         return new OpenAiSolutionResponse($solutionText);
     }
 
-    protected function getClient(string $apiKey, ?string $organization = null, ?string $project = null)
+    protected function getClient(string $apiKey)
     {
         return (new Factory())
             ->withBaseUri('https://openrouter.ai/api/v1')
             ->withApiKey($apiKey)
-            ->withOrganization($organization)
-            ->withProject($project)
-            ->withHttpHeader('OpenAI-Beta', 'assistants=v2')
+            ->withHttpHeader('HTTP-Referer', config('app.url'))
+            ->withHttpHeader('X-Title', 'Spatie Ignition AI Solution')
             ->make();
     }
 }
