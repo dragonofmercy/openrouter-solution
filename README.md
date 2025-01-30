@@ -4,18 +4,8 @@ AI Solution provider using OpenRouter service for Spatie Ignition Error Solution
 
 ## Usage
 
-In your composer.json
-
-````json
-{
-    "repositories": [{
-        "type": "vcs",
-        "url": "https://github.com/dragonofmercy/openrouter-solution.git"
-    }],
-    "require": {
-        "dragonofmercy/openrouter-solution": "dev-main"
-    }
-}
+````bash
+composer require dragonofmercy/openrouter-solution
 ````
 
 ### Publish configuration file
